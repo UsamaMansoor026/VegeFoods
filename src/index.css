@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.global-padding {
+  @apply px-20 md:px-14 xsm:px-6;
+}
+
+header {
+  overflow-x: hidden !important;
+}
+
+nav > ul {
+  @apply flex items-center md:hidden z-[9999];
+}
+
+.mobNav {
+  @apply flex flex-col absolute top-24 right-0 bg-white z-[9999];
+  transform: translateX(100%);
+  box-shadow: 4px 5px 10px 4px rgba(0, 0, 0, 0.5);
+  animation: slideIn 1s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0.5;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
