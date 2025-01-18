@@ -7,17 +7,19 @@ import {
 import { IoMdClose, IoMdMenu } from "react-icons/io";
 import Logo from "./Logo";
 import { Link } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { NavigationContext } from "../context/NavigationContext";
 const Header = () => {
   const { currentLink, setCurrentLink } = useContext(NavigationContext);
   const [showMobNav, setShowMobNav] = useState<boolean>(false);
-  // const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
 
   /* This useEffect keeps track of the window width in real time */
-  /* useEffect(() => {
+  useEffect(() => {
     const handleResize = () => {
-      setWindowWidth(window.innerWidth);
+      if (window.innerWidth > 991) {
+        document.querySelector("nav ul")?.classList.remove("mobNav");
+        setShowMobNav(false);
+      }
     };
 
     window.addEventListener("resize", handleResize);
@@ -25,10 +27,10 @@ const Header = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []); */
+  }, []);
 
   return (
-    <header className="font-poppins">
+    <header className="font-poppins shadow-sm shadow-primary">
       {/* Upper Portion */}
       <div className="bg-primary text-white global-padding flex items-center justify-between py-[10px] sm:flex-col sm:items-start md:gap-2">
         <div className="flex items-center gap-2 text-[11px] sm:text-[13px]">
@@ -51,7 +53,7 @@ const Header = () => {
       </div>
 
       {/* Nav Links and logo */}
-      <nav className="global-padding bg-white flex items-center justify-between md:py-5  overflow-x-hidden">
+      <nav className="global-padding bg-darkBg flex items-center justify-between md:py-5  overflow-x-hidden">
         <Logo />
 
         <ul className={` ${showMobNav ? "mobNav" : ""}`}>
@@ -59,11 +61,11 @@ const Header = () => {
             className={`${
               currentLink === "home"
                 ? "text-primary font-semibold underline"
-                : ""
+                : "text-white"
             } text-[12px] px-6 py-5 uppercase tracking-[1.8px] duration-150 hover:underline underline-offset-8`}
             onClick={() => {
               setCurrentLink("home");
-              setShowMobNav(!showMobNav);
+              setShowMobNav(false);
             }}
           >
             <Link to="/">Home</Link>
@@ -72,11 +74,11 @@ const Header = () => {
             className={`${
               currentLink === "about"
                 ? "text-primary font-semibold underline"
-                : ""
+                : "text-white"
             } text-[12px] px-6 py-5 uppercase tracking-[1.8px] duration-150 hover:underline underline-offset-8`}
             onClick={() => {
               setCurrentLink("about");
-              setShowMobNav(!showMobNav);
+              setShowMobNav(false);
             }}
           >
             <Link to="/about">About</Link>
@@ -85,11 +87,11 @@ const Header = () => {
             className={`${
               currentLink === "shop"
                 ? "text-primary font-semibold underline"
-                : ""
+                : "text-white"
             } text-[12px] px-6 py-5 uppercase tracking-[1.8px] duration-150 hover:underline underline-offset-8`}
             onClick={() => {
               setCurrentLink("shop");
-              setShowMobNav(!showMobNav);
+              setShowMobNav(false);
             }}
           >
             <Link to="/shop">Shop</Link>
@@ -98,11 +100,11 @@ const Header = () => {
             className={`${
               currentLink === "contact"
                 ? "text-primary font-semibold underline"
-                : ""
+                : "text-white"
             } text-[12px] px-6 py-5 uppercase tracking-[1.8px] duration-150 hover:underline underline-offset-8`}
             onClick={() => {
               setCurrentLink("contact");
-              setShowMobNav(!showMobNav);
+              setShowMobNav(false);
             }}
           >
             <Link to="/contact">Contact</Link>

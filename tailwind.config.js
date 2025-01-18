@@ -5,9 +5,7 @@ export default {
     extend: {
       colors: {
         primary: "#82ae46",
-        "pale-gold": "#dcc698",
-        "light-skyblue": "#a2d1e1",
-        "light-olive": "#dcd691",
+        darkBg: "#1C2833",
         gray: "#808080",
         white: "#FFFAFA",
         black: "#242124",
@@ -22,6 +20,7 @@ export default {
       fontFamily: {
         lora: ["Lora", "serif"],
         poppins: ["Poppins", "sans-serif"],
+        amaticsSC: ["Amatic SC", "serif"],
       },
     },
   },
