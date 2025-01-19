@@ -5,15 +5,15 @@ export default {
     extend: {
       colors: {
         primary: "#82ae46",
-        darkBg: "#1C2833",
+        darkBg: "#fff",
         gray: "#808080",
         white: "#FFFAFA",
         black: "#242124",
       },
 
       screens: {
-        xsm: { max: "500px" },
-        sm: { max: "720px" },
+        // xsm: { max: "500px" },
+        xsm: { max: "720px" },
         md: { max: "991px" },
       },
 

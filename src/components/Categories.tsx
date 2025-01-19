@@ -21,7 +21,7 @@ const Categories: React.FC = () => {
           benefits.map((item: benefitsProps) => (
             <article
               key={item.id}
-              className="flex flex-col justify-center items-center shadow-sm shadow-primary py-5"
+              className="flex flex-col justify-center items-center shadow-sm shadow-primary py-10"
             >
               <div
                 className="text-darkBg w-[100px] h-[100px] rounded-full flex items-center justify-center text-[50px]"
@@ -30,10 +30,10 @@ const Categories: React.FC = () => {
                 <item.icon />
               </div>
               <div className="text-center my-2 uppercase">
-                <h3 className="font-semibold text-white text-[18px]">
+                <h3 className="font-semibold text-black text-[18px]">
                   {item.title}
                 </h3>
-                <span className="text-[12px] text-white/80">{item.desc}</span>
+                <span className="text-[12px] text-gray">{item.desc}</span>
               </div>
             </article>
           ))}

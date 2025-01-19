@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import Header from "./components/Header";
 import { About, Cart, Contact, Home, Shop } from "./pages";
+import { Header } from "./components";
 
 const App = () => {
   return (

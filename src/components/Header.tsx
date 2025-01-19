@@ -32,7 +32,7 @@ const Header = () => {
   return (
     <header className="font-poppins shadow-sm shadow-primary">
       {/* Upper Portion */}
-      <div className="bg-primary text-white global-padding flex items-center justify-between py-[10px] sm:flex-col sm:items-start md:gap-2">
+      <div className="bg-primary text-white global-padding flex items-center justify-between py-[10px] xsm:flex-col sm:items-start md:gap-2">
         <div className="flex items-center gap-2 text-[11px] sm:text-[13px]">
           <span>
             <FaPhoneAlt />
@@ -61,7 +61,7 @@ const Header = () => {
             className={`${
               currentLink === "home"
                 ? "text-primary font-semibold underline"
-                : "text-white"
+                : "text-black"
             } text-[12px] px-6 py-5 uppercase tracking-[1.8px] duration-150 hover:underline underline-offset-8`}
             onClick={() => {
               setCurrentLink("home");
@@ -74,7 +74,7 @@ const Header = () => {
             className={`${
               currentLink === "about"
                 ? "text-primary font-semibold underline"
-                : "text-white"
+                : "text-black"
             } text-[12px] px-6 py-5 uppercase tracking-[1.8px] duration-150 hover:underline underline-offset-8`}
             onClick={() => {
               setCurrentLink("about");
@@ -87,7 +87,7 @@ const Header = () => {
             className={`${
               currentLink === "shop"
                 ? "text-primary font-semibold underline"
-                : "text-white"
+                : "text-black"
             } text-[12px] px-6 py-5 uppercase tracking-[1.8px] duration-150 hover:underline underline-offset-8`}
             onClick={() => {
               setCurrentLink("shop");
@@ -100,7 +100,7 @@ const Header = () => {
             className={`${
               currentLink === "contact"
                 ? "text-primary font-semibold underline"
-                : "text-white"
+                : "text-black"
             } text-[12px] px-6 py-5 uppercase tracking-[1.8px] duration-150 hover:underline underline-offset-8`}
             onClick={() => {
               setCurrentLink("contact");
