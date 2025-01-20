@@ -67,3 +67,7 @@ nav > ul {
     transform: scale(1);
   }
 }
+
+.footer_link {
+  @apply font-light text-sm xsm:text-lg w-[max-content] xsm:mx-auto duration-200 hover:tracking-[2px] mb-2;
+}

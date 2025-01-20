@@ -1,6 +1,7 @@
 import {
   Categories,
   Hero,
+  NewsLetter,
   Partners,
   Products,
   Testimonials,
@@ -14,6 +15,7 @@ const Home = () => {
       <Products />
       <Testimonials />
       <Partners />
+      <NewsLetter />
     </>
   );
 };

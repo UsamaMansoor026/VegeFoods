@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { About, Cart, Contact, Home, Shop } from "./pages";
-import { Header } from "./components";
+import { Footer, Header } from "./components";
 
 const App = () => {
   return (
@@ -14,6 +14,8 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
+
+      <Footer />
     </>
   );
 };

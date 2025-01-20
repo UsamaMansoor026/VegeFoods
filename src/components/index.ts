@@ -8,6 +8,8 @@ import ProductCard from "./ProductCard";
 import ProductList from "./ProductList";
 import Testimonials from "./Testimonials";
 import Partners from "./Partners";
+import NewsLetter from "./NewsLetter";
+import Footer from "./Footer";
 
 export {
   Hero,
@@ -20,4 +22,6 @@ export {
   ProductList,
   Testimonials,
   Partners,
+  NewsLetter,
+  Footer,
 };
