@@ -34,6 +34,13 @@ import personFemale1 from "../assets/testimonials/person_5.webp";
 import personFemale2 from "../assets/testimonials/person_7.webp";
 import personFemale3 from "../assets/testimonials/person_8.webp";
 
+/* Partner Brands Images */
+import microsoft from "../assets/partners/microsoft.webp";
+import adobe from "../assets/partners/adobe.webp";
+import android from "../assets/partners/android.webp";
+import google from "../assets/partners/google.webp";
+import java from "../assets/partners/java.webp";
+
 export const benefits = [
   {
     id: 1,
@@ -238,3 +245,5 @@ export const testimonials = [
       "Writing about food is my passion, and VegeFoods adds value to it. Their produce makes every recipe come alive with flavor!",
   },
 ];
+
+export const partners = [microsoft, adobe, android, google, java];

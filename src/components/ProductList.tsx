@@ -19,7 +19,7 @@ const ProductList = ({ limit }: ProductListType) => {
     <div className="mt-16 grid xsm:grid-cols-2 md:grid-cols-3 grid-cols-4 gap-5">
       {products?.length > 0 &&
         products.slice(0, limit).map((product: SingleProduct) => {
-          return <ProductCard {...product} />;
+          return <ProductCard key={product.id} {...product} />;
         })}
     </div>
   );

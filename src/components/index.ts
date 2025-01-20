@@ -7,6 +7,7 @@ import Categories from "./Categories";
 import ProductCard from "./ProductCard";
 import ProductList from "./ProductList";
 import Testimonials from "./Testimonials";
+import Partners from "./Partners";
 
 export {
   Hero,
@@ -18,4 +19,5 @@ export {
   ProductCard,
   ProductList,
   Testimonials,
+  Partners,
 };
