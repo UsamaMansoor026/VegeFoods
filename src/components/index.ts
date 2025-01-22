@@ -10,6 +10,8 @@ import Testimonials from "./Testimonials";
 import Partners from "./Partners";
 import NewsLetter from "./NewsLetter";
 import Footer from "./Footer";
+import PageHeader from "./PageHeader";
+import SplitText from "./SplitText";
 
 export {
   Hero,
@@ -24,4 +26,6 @@ export {
   Partners,
   NewsLetter,
   Footer,
+  PageHeader,
+  SplitText,
 };

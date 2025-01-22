@@ -2,6 +2,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useState } from "react";
+import SplitText from "./SplitText";
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
@@ -19,6 +20,8 @@ const Hero = () => {
     },
   };
 
+  const handleAnimationComplete = () => console.log("Animation Completed");
+
   return (
     <div className="overflow-x-hidden">
       <Slider {...sliderSettings}>
@@ -30,9 +33,21 @@ const Hero = () => {
           <div className="absolute inset-0 bg-black/50"></div>
 
           <div className="heroSlide-content">
-            <h1 className="font-amaticsSC text-[8vw] leading-[1.3] mb-2 text-white whitespace-nowrap uppercase">
+            <SplitText
+              text="We Serve Fresh vegetables & fruits"
+              textAlign="center"
+              className="font-amaticsSC text-[8vw] leading-[1.3] mb-2 text-white whitespace-nowrap uppercase"
+              delay={50}
+              animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
+              animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
+              easing="easeOutCubic"
+              threshold={0.2}
+              rootMargin="-50px"
+              onLetterAnimationComplete={handleAnimationComplete}
+            />
+            {/* <h1 className="font-amaticsSC text-[8vw] leading-[1.3] mb-2 text-white whitespace-nowrap uppercase">
               We Serve Fresh vegetables & fruits
-            </h1>
+            </h1> */}
             <h2 className="text-[12px] text-white font-poppins uppercase font-light tracking-[4px] mb-4 whitespace-nowrap">
               we deliver organic vegetables & fruits
             </h2>
@@ -53,9 +68,21 @@ const Hero = () => {
           <div className="absolute inset-0 bg-black/40"></div>
 
           <div className="heroSlide-content">
-            <h1 className="font-amaticsSC text-[8vw] leading-[1.3] mb-2 text-white whitespace-nowrap uppercase">
+            <SplitText
+              text="100% fresh & organic fruits"
+              textAlign="center"
+              className="font-amaticsSC text-[8vw] leading-[1.3] mb-2 text-white whitespace-nowrap uppercase"
+              delay={50}
+              animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
+              animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
+              easing="easeOutCubic"
+              threshold={0.2}
+              rootMargin="-50px"
+              onLetterAnimationComplete={handleAnimationComplete}
+            />
+            {/* <h1 className="font-amaticsSC text-[8vw] leading-[1.3] mb-2 text-white whitespace-nowrap uppercase">
               100% fresh & organic fruits
-            </h1>
+            </h1> */}
             <h2 className="text-[12px] text-white font-poppins uppercase font-light tracking-[4px] mb-4 whitespace-nowrap">
               we deliver organic vegetables & fruits
             </h2>

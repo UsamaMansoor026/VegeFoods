@@ -13,6 +13,7 @@ interface benefitsProps {
 
 const Categories: React.FC = () => {
   const { setCurrentLink } = useContext(NavigationContext);
+
   return (
     <section className="global-padding py-16">
       {/* Benefits */}

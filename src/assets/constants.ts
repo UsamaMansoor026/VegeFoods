@@ -23,6 +23,8 @@ import onion from "../assets/products/product-9.webp";
 import apple from "../assets/products/product-10.webp";
 import garlic from "../assets/products/product-11.webp";
 import chilli from "../assets/products/product-12.webp";
+import dates from "../assets/products/dates.jpg";
+import almonds from "../assets/products/almonds.jpg";
 
 /* Testimonial Users Avatars */
 import personMale1 from "../assets/testimonials/person_1.webp";
@@ -88,6 +90,7 @@ export const products = [
     price: 450,
     discount: 10,
     quantity: "per KG",
+    category: "vegetables",
   },
   {
     id: 2,
@@ -96,6 +99,7 @@ export const products = [
     price: 300,
     discount: 15,
     quantity: "per KG",
+    category: "fruits",
   },
   {
     id: 3,
@@ -104,6 +108,7 @@ export const products = [
     price: 150,
     discount: 0,
     quantity: "per KG",
+    category: "vegetables",
   },
   {
     id: 4,
@@ -112,6 +117,7 @@ export const products = [
     price: 250,
     discount: 0,
     quantity: "per KG",
+    category: "vegetables",
   },
   {
     id: 5,
@@ -120,6 +126,7 @@ export const products = [
     price: 370,
     discount: 20,
     quantity: "per KG",
+    category: "vegetables",
   },
   {
     id: 6,
@@ -128,6 +135,7 @@ export const products = [
     price: 290,
     discount: 5,
     quantity: "per KG",
+    category: "vegetables",
   },
   {
     id: 7,
@@ -136,6 +144,7 @@ export const products = [
     price: 200,
     discount: 0,
     quantity: "per bottle",
+    category: "juices",
   },
   {
     id: 8,
@@ -144,6 +153,7 @@ export const products = [
     price: 80,
     discount: 0,
     quantity: "per KG",
+    category: "vegetables",
   },
   {
     id: 9,
@@ -152,6 +162,7 @@ export const products = [
     price: 380,
     discount: 15,
     quantity: "per KG",
+    category: "vegetables",
   },
   {
     id: 10,
@@ -160,6 +171,7 @@ export const products = [
     price: 250,
     discount: 5,
     quantity: "per KG",
+    category: "fruits",
   },
   {
     id: 11,
@@ -168,6 +180,7 @@ export const products = [
     price: 100,
     discount: 10,
     quantity: "per KG",
+    category: "vegetables",
   },
   {
     id: 12,
@@ -176,6 +189,25 @@ export const products = [
     price: 140,
     discount: 0,
     quantity: "per KG",
+    category: "vegetables",
+  },
+  {
+    id: 13,
+    name: "dates",
+    image: dates,
+    price: 600,
+    discount: 5,
+    quantity: "per KG",
+    category: "dried",
+  },
+  {
+    id: 14,
+    name: "almonds",
+    image: almonds,
+    price: 1400,
+    discount: 13,
+    quantity: "per KG",
+    category: "dried",
   },
 ];
 
