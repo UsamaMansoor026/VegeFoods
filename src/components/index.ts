@@ -12,6 +12,11 @@ import NewsLetter from "./NewsLetter";
 import Footer from "./Footer";
 import PageHeader from "./PageHeader";
 import SplitText from "./SplitText";
+import ContactForm from "./ContactForm";
+import AuthModel from "./AuthModel";
+import InputField from "./InputField";
+import LoginForm from "./LoginForm";
+import RegisterForm from "./RegisterForm";
 
 export {
   Hero,
@@ -28,4 +33,9 @@ export {
   Footer,
   PageHeader,
   SplitText,
+  ContactForm,
+  AuthModel,
+  InputField,
+  LoginForm,
+  RegisterForm,
 };
