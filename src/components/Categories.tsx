@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { benefits, categoriesImages } from "../assets/constants";
 import { Link } from "react-router-dom";
 import { NavigationContext } from "../context/NavigationContext";
+import { motion } from "framer-motion";
 
 interface benefitsProps {
   id: number;
@@ -19,8 +20,12 @@ const Categories: React.FC = () => {
       {/* Benefits */}
       <div className="grid grid-cols-4 md:grid-cols-2 items-center gap-7">
         {benefits?.length > 0 &&
-          benefits.map((item: benefitsProps) => (
-            <article
+          benefits.map((item: benefitsProps, index: number) => (
+            <motion.div
+              initial={{ x: -150, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
               key={item.id}
               className="flex flex-col justify-center items-center shadow-sm shadow-primary py-10"
             >
@@ -36,7 +41,7 @@ const Categories: React.FC = () => {
                 </h3>
                 <span className="text-[12px] text-gray">{item.desc}</span>
               </div>
-            </article>
+            </motion.div>
           ))}
       </div>
 
@@ -45,7 +50,11 @@ const Categories: React.FC = () => {
         <div className="col-span-2 md:col-span-1 flex md:flex-col-reverse items-center md:items-stretch gap-5">
           <div className="basis-[50%] md:basis-[100%] flex flex-col gap-5">
             {/* Category 1 */}
-            <div
+            <motion.div
+              initial={{ scale: 0.3, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true, amount: 0.8 }}
+              transition={{ duration: 0.5 }}
               className={`w-full h-[250px] relative flex items-end`}
               style={{
                 background: `url(${categoriesImages.vegetables})`,
@@ -63,8 +72,12 @@ const Categories: React.FC = () => {
               >
                 Vegetables
               </Link>
-            </div>
-            <div
+            </motion.div>
+            <motion.div
+              initial={{ scale: 0.3, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true, amount: 0.8 }}
+              transition={{ duration: 0.5 }}
               className={`w-full h-[250px] relative flex items-end`}
               style={{
                 background: `url(${categoriesImages.fruits})`,
@@ -82,7 +95,7 @@ const Categories: React.FC = () => {
               >
                 Fruits
               </Link>
-            </div>
+            </motion.div>
           </div>
 
           {/*  */}
@@ -114,7 +127,11 @@ const Categories: React.FC = () => {
         </div>
         <div className="flex flex-col gap-5">
           {/* Category 3 */}
-          <div
+          <motion.div
+            initial={{ scale: 0.3, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true, amount: 0.8 }}
+            transition={{ duration: 0.5 }}
             className={`h-[250px] relative flex items-end`}
             style={{
               background: `url(${categoriesImages.juices})`,
@@ -132,8 +149,12 @@ const Categories: React.FC = () => {
             >
               Juices
             </Link>
-          </div>
-          <div
+          </motion.div>
+          <motion.div
+            initial={{ scale: 0.3, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true, amount: 0.8 }}
+            transition={{ duration: 0.5 }}
             className={`w-full h-[250px] relative flex items-end`}
             style={{
               background: `url(${categoriesImages.dried})`,
@@ -151,7 +172,7 @@ const Categories: React.FC = () => {
             >
               Dried
             </Link>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

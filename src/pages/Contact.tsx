@@ -1,5 +1,6 @@
 import { PageHeader } from "../components";
 import ContactForm from "../components/ContactForm";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
@@ -8,7 +9,13 @@ const Contact = () => {
 
       <section className="global-padding py-7 flex md:flex-col gap-5">
         {/* Company Information */}
-        <div className="w-1/2 md:w-full font-poppins flex flex-col gap-4">
+        <motion.div
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true, amount: 0.6 }}
+          transition={{ duration: 0.5 }}
+          className="w-1/2 md:w-full font-poppins flex flex-col gap-4"
+        >
           {/* Address */}
           <div className="flex flex-col gap-1">
             <span className="text-gray">Address:</span>
@@ -26,11 +33,17 @@ const Contact = () => {
             <span className="text-gray">Email:</span>
             <p className="text-black text-[13px]">vegefoods@gmail.com</p>
           </div>
-        </div>
-        <div className="w-1/2 md:w-full">
+        </motion.div>
+        <motion.div
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true, amount: 0.6 }}
+          transition={{ duration: 0.5 }}
+          className="w-1/2 md:w-full"
+        >
           {/* Contact Form */}
           <ContactForm />
-        </div>
+        </motion.div>
       </section>
     </>
   );
